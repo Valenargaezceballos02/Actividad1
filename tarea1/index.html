@@ -1,0 +1,45 @@
+/ areglos(Arrays)
+
+let varios = [1,"juan", "bogota",20.45, true];
+
+console.log(varios.length);
+console.log(varios[0]);
+// agregar un solo valor
+
+varios.push(30);
+console.log(varios);
+// sacar un elemento
+varios.pop();
+
+let enteros = [1,2,3,4,5,7,9];
+//concatenar
+let concat = varios.concat(enteros);
+console.log(concat);
+//agregar al inicio 
+
+let inicio = concat.unshift("inicio");
+console.log(inicio);
+//quitar el primer elemento 
+inicio = concat.shift();
+
+for(i = 0;i<varios.length;i++){
+    console.log(varios[i]);
+}
+
+varios.forEach(elementos =>{
+    console.log(elementos);
+})
+
+//.reduce()
+
+let numeros = [100,300,2,5,10]
+let resultado = numeros.reduce((accumulador,valorActual)=>{
+    return accumulador+valorActual;
+})
+
+console.log(resultado);
+
+//filter()
+let filtrado = numeros.filter(numero =>{
+    return numero > 10;
+});
